@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0b1220;
+  --bg-secondary: #111827;
+  --accent-green: #00ff88;
+  --accent-blue: #38bdf8;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+html {
+  background-color: var(--bg-primary);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: #ffffff;
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Grid background */
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: rgba(17, 24, 39, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 255, 136, 0.35);
+}
+
+/* Section eyebrow label */
+.eyebrow {
+  font-family: var(--font-jetbrains-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-green);
+}
+
+/* Gradient text */
+.text-gradient {
+  background: linear-gradient(90deg, #00ff88, #38bdf8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: #1f2937;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff88;
+}
+
+/* Custom glow cursor (desktop only, respects fine pointers) */
+@media (pointer: fine) {
+  .cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 380px;
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 0;
+    background: radial-gradient(
+      circle,
+      rgba(0, 255, 136, 0.08) 0%,
+      rgba(56, 189, 248, 0.04) 40%,
+      transparent 70%
+    );
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #00ff88;
+    box-shadow: 0 0 12px 2px rgba(0, 255, 136, 0.7);
+    pointer-events: none;
+    z-index: 60;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+  }
+}
+
+/* Terminal caret */
+.caret {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: #00ff88;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--accent-green);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Marquee track for logos / tech strip */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
