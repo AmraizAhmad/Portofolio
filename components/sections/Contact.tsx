@@ -22,12 +22,12 @@ export default function Contact() {
     };
 
     try {
-      https://formspree.io/f/xnjeaabw, {
+      const res = await fetch("https://formspree.io/f/xnjeaabw", {
         method: "POST",
         headers: {
-     "Content-Type": "application/json",
-     "Accept": "application/json",
-   },
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Request failed");
@@ -67,7 +67,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <a
+            
               href={`mailto:${profile.email}`}
               className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30"
             >
@@ -80,7 +80,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a
+            
               href={`tel:${profile.phone.replace(/\s+/g, "")}`}
               className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30"
             >
@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a
+            
               href={profile.github}
               target="_blank"
               rel="noopener noreferrer"
@@ -108,7 +108,7 @@ export default function Contact() {
               </div>
             </a>
 
-            <a
+            
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"
@@ -202,7 +202,7 @@ export default function Contact() {
 
             {status === "sent" && (
               <p className="text-center text-sm text-accent-green">
-                Message sent — I&apos;ll get back to you soon.
+                Message sent. I&apos;ll get back to you soon.
               </p>
             )}
             {status === "error" && (
