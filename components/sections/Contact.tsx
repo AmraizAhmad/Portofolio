@@ -22,9 +22,12 @@ export default function Contact() {
     };
 
     try {
-      const res = await fetch("/api/contact", {
+      https://formspree.io/f/xnjeaabw, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+     "Content-Type": "application/json",
+     "Accept": "application/json",
+   },
         body: JSON.stringify(data),
       });
       if (!res.ok) throw new Error("Request failed");
