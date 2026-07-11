@@ -160,63 +160,14 @@ export const projects: Project[] = [
     status: "Live",
   },
   {
-    title: "Python Port Scanner",
+    title: "Network Packet Sniffer",
     description:
-      "A multithreaded TCP port scanner with service detection and clean CLI output, built to understand scanning internals beyond Nmap.",
-    tech: ["Python", "Sockets", "Threading"],
-    github: "https://github.com/AmraizAhmad/python-port-scanner",
-    status: "In Progress",
-  },
-  {
-    title: "Network Scanner",
-    description:
-      "A local network discovery tool that maps live hosts, open ports, and basic OS fingerprints across a subnet.",
-    tech: ["Python", "Scapy", "ARP"],
-    github: "https://github.com/AmraizAhmad/network-scanner",
-    status: "In Progress",
-  },
-  {
-    title: "Linux Notes",
-    description:
-      "A structured, growing knowledge base of Linux internals, hardening checklists, and command references for day-to-day security work.",
-    tech: ["Markdown", "Linux", "Bash"],
-    github: "https://github.com/AmraizAhmad/linux-notes",
+      "A real-time network traffic capture and analysis tool built with Scapy — parses Ethernet, IP, TCP, UDP, ICMP, and ARP layers to show how data actually flows across a network.",
+    tech: ["Python", "Scapy", "Networking"],
+    github: "https://github.com/AmraizAhmad/network-packet-sniffer",
     status: "Live",
   },
-  {
-    title: "Password Strength Checker",
-    description:
-      "A tool that scores password strength against entropy, common patterns, and breach-list exposure to teach better password hygiene.",
-    tech: ["Python", "Regex", "HaveIBeenPwned API"],
-    github: "https://github.com/AmraizAhmad/password-strength-checker",
-    status: "Planned",
-  },
-  {
-    title: "Web Security Labs",
-    description:
-      "A personal collection of write-ups and PoCs from OWASP Top 10 style labs — SQLi, XSS, IDOR, auth bypass, and more.",
-    tech: ["Burp Suite", "OWASP", "DVWA"],
-    github: "https://github.com/AmraizAhmad/web-security-labs",
-    status: "In Progress",
-  },
-  {
-    title: "Nmap Automation",
-    description:
-      "A Bash/Python wrapper that chains Nmap scan profiles and auto-generates a readable recon report per target.",
-    tech: ["Bash", "Python", "Nmap"],
-    github: "https://github.com/AmraizAhmad/nmap-automation",
-    status: "Planned",
-  },
-  {
-    title: "Log Analyzer",
-    description:
-      "A log parsing utility that flags suspicious authentication attempts and common attack signatures from server logs.",
-    tech: ["Python", "Pandas", "Regex"],
-    github: "https://github.com/AmraizAhmad/log-analyzer",
-    status: "Planned",
-  },
 ];
-
 export type Certification = {
   title: string;
   issuer: string;
