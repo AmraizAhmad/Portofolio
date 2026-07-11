@@ -59,7 +59,6 @@ export default function Contact() {
         </motion.div>
 
         <div className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          {/* Info column */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -67,10 +66,7 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            
-              href={`mailto:${profile.email}`}
-              className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30"
-            >
+            <a href={`mailto:${profile.email}`} className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-green/10 text-accent-green">
                 <Mail size={18} />
               </span>
@@ -80,10 +76,7 @@ export default function Contact() {
               </div>
             </a>
 
-            
-              href={`tel:${profile.phone.replace(/\s+/g, "")}`}
-              className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30"
-            >
+            <a href={`tel:${profile.phone.replace(/\s+/g, "")}`} className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-green/30">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-green/10 text-accent-green">
                 <Phone size={18} />
               </span>
@@ -93,12 +86,7 @@ export default function Contact() {
               </div>
             </a>
 
-            
-              href={profile.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-blue/30"
-            >
+            <a href={profile.github} target="_blank" rel="noopener noreferrer" className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-blue/30">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue">
                 <Github size={18} />
               </span>
@@ -108,12 +96,7 @@ export default function Contact() {
               </div>
             </a>
 
-            
-              href={profile.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-blue/30"
-            >
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="glass-card flex items-center gap-4 p-5 shadow-card transition-colors hover:border-accent-blue/30">
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-accent-blue/10 text-accent-blue">
                 <Linkedin size={18} />
               </span>
@@ -123,7 +106,6 @@ export default function Contact() {
               </div>
             </a>
 
-            {/* Map placeholder */}
             <div className="glass-card relative flex h-40 items-center justify-center overflow-hidden shadow-card">
               <div className="bg-grid absolute inset-0 opacity-40" />
               <div className="relative flex flex-col items-center gap-2 text-gray-400">
@@ -133,7 +115,6 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.form
             onSubmit={handleSubmit}
             initial={{ opacity: 0, x: 20 }}
@@ -143,10 +124,7 @@ export default function Contact() {
             className="glass-card space-y-5 p-7 shadow-card"
           >
             <div>
-              <label
-                htmlFor="name"
-                className="mb-2 block text-xs font-medium text-gray-400"
-              >
+              <label htmlFor="name" className="mb-2 block text-xs font-medium text-gray-400">
                 Name
               </label>
               <input
@@ -159,10 +137,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label
-                htmlFor="email"
-                className="mb-2 block text-xs font-medium text-gray-400"
-              >
+              <label htmlFor="email" className="mb-2 block text-xs font-medium text-gray-400">
                 Email
               </label>
               <input
@@ -175,10 +150,7 @@ export default function Contact() {
               />
             </div>
             <div>
-              <label
-                htmlFor="message"
-                className="mb-2 block text-xs font-medium text-gray-400"
-              >
+              <label htmlFor="message" className="mb-2 block text-xs font-medium text-gray-400">
                 Message
               </label>
               <textarea
