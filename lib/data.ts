@@ -167,6 +167,14 @@ export const projects: Project[] = [
     github: "https://github.com/AmraizAhmad/network-packet-sniffer",
     status: "Live",
   },
+{
+  title: "Secure Coding Review",
+  description:
+    "A manual + automated security audit of my own packet sniffer project — found and fixed 7 hardening issues around error handling, memory safety, and data protection.",
+  tech: ["Python", "Bandit", "Secure Coding"],
+  github: "https://github.com/AmraizAhmad/python-security-audit",
+  status: "Live",
+},
 ];
 export type Certification = {
   title: string;
