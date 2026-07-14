@@ -175,6 +175,14 @@ export const projects: Project[] = [
   github: "https://github.com/AmraizAhmad/python-security-audit",
   status: "Live",
 },
+{
+  title: "Phishing Awareness Training",
+  description:
+    "An interactive training module for recognizing phishing emails and fake websites — includes a clickable annotated email exercise, social engineering tactics, and a 6-question knowledge check.",
+  tech: ["HTML", "CSS", "JavaScript"],
+  github: "https://github.com/AmraizAhmad/phishing-awareness-training",
+  status: "Live",
+},
 ];
 export type Certification = {
   title: string;
