@@ -183,6 +183,14 @@ export const projects: Project[] = [
   github: "https://github.com/AmraizAhmad/phishing-awareness-training",
   status: "Live",
 },
+{
+  title: "Rule-Based Intrusion Detection System",
+  description:
+    "A network intrusion detection system built from scratch in Python — implements port scan, ICMP/SYN flood, ARP spoofing, and signature-based (SQLi/XSS) detection, with tunable rules and an optional alert visualization report.",
+  tech: ["Python", "Scapy", "Network Security"],
+  github: "https://github.com/AmraizAhmad/rule-based-ids",
+  status: "Live",
+},
 ];
 export type Certification = {
   title: string;
